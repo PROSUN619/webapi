@@ -21,24 +21,24 @@ namespace CosoleToWebAPI
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
 
-      app.Use( async (context, next) =>
-      {
-         await context.Response.WriteAsync("Hello from Block 1 RUN 1\n");
-         await next();
-         await context.Response.WriteAsync("Hello from Block 1 RUN 2\n");
-      });
+      //app.Use( async (context, next) =>
+      //{
+      //   await context.Response.WriteAsync("Hello from Block 1 RUN 1\n");
+      //   await next();
+      //   await context.Response.WriteAsync("Hello from Block 1 RUN 2\n");
+      //});
 
-      app.Use(async (context, next) =>
-      {
-        await context.Response.WriteAsync("Hello from Block 2 RUN 1\n");
-        await next();
-        await context.Response.WriteAsync("Hello from Block 2 RUN 2\n");
-      });
+      //app.Use(async (context, next) =>
+      //{
+      //  await context.Response.WriteAsync("Hello from Block 2 RUN 1\n");
+      //  await next();
+      //  await context.Response.WriteAsync("Hello from Block 2 RUN 2\n");
+      //});
 
-      app.Use(async (context, next) =>
-      {
-        await context.Response.WriteAsync("Request Complete\n");
-      });
+      //app.Use(async (context, next) =>
+      //{
+      //  await context.Response.WriteAsync("Request Complete\n");
+      //});
 
       //app.UseMiddleware<CustomMiddleware1>();
 

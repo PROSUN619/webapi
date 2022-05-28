@@ -12,7 +12,7 @@ namespace CosoleToWebAPI.Controllers
   {
     public string Get()
     {
-      return "Hello from test Get";
+      return "Hello from test Get0";
     }
 
     public string Get1()
