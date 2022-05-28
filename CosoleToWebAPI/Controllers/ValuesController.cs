@@ -7,36 +7,36 @@ using System.Threading.Tasks;
 
 namespace CosoleToWebAPI.Controllers
 {
- // [Route("api/[controller]")]
+  [Route("api/[controller]/")]
   [ApiController]
   public class ValuesController : ControllerBase
   {
-    [Route("api/get-all")]
+    [Route("[action]")]
     public string GetAll()
     {
       return "Hello from GetAll";
     }
 
-    [Route("api/get-all-authors")]
+    [Route("[action]")]
     public string GetAllAuthors()
     {
       return "Hello from GetAll Authors";
     }
 
-    [Route("bookbyid/{id}")]
+    [Route("[action]/{id}")]
     public string GetBookbyId(int id)
     {
       return id.ToString();
     }
 
-    [Route("bookbyauthorid/{id}/{authid}")]
+    [Route("[action]/{id}/{authid}")]
     public string GetBookbyAuthorId(int id, int authId)
     {
       return id.ToString() + " - " + authId.ToString();
     }
 
     //get method with query string
-    [Route("search")]
+    [Route("[action]")]
     public string search(int id, string name, int age)
     {
       return id.ToString() + " - " + name.ToString() + " - " + age.ToString();
