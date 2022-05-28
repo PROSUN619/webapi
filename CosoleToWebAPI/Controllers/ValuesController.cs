@@ -42,5 +42,11 @@ namespace CosoleToWebAPI.Controllers
       return id.ToString() + " - " + name.ToString() + " - " + age.ToString();
     }
 
+    [Route("~/OverideParentRoute")]
+    public string OverideParentRoute()
+    {
+      return "Parent route overridden";
+    }
+
   }
 }
