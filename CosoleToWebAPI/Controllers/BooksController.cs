@@ -14,13 +14,13 @@ namespace CosoleToWebAPI.Controllers
     //if action method name not mentioned in route then in URL action name is not required
     //https://localhost:44345/api/books/1
 
-    [Route("{id:number:min(10):max(100)}")]    
+    [Route("{id:int:min(10):max(100)}")]    
     public string GetBookbyId(int id)
     {
       return "Hello " + id;
     }
 
-    [Route("{id:string}")]
+    [Route("{id}")]
     //https://localhost:44345/api/books/1
     public string GetBookbyStringId(string id)
     {
