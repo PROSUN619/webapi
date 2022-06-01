@@ -44,6 +44,8 @@ namespace CosoleToWebAPI.Controllers
       //return Accepted("animal", props); //return 202 along with complete URL 
       //return AcceptedAtAction("GetData");
       return AcceptedAtRoute("data");
+
+      // return BadRequest() // if condition does not match
     }
   }
 }
